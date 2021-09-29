@@ -1,0 +1,18 @@
+{
+  "name": "youtube-integration",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "start": "browser-sync start --server --files \"*.html\""
+  },
+  "dependencies": {
+    "mediaelement": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}

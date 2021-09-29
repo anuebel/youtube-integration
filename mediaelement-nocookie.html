@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mediaelement (youtube-nocookie.com)</title>
+    <link rel="stylesheet" href="node_modules/mediaelement/build/mediaelementplayer.css"/>
+</head>
+<body>
+<h1>Als mediaelement von youtube-nocookie.com</h1>
+<video style="max-width: 100%">
+    <source type="video/youtube" src="https://www.youtube.com/watch?v=YE7VzlLtp-4">
+</video>
+<script src="node_modules/mediaelement/build/mediaelement-and-player.js"></script>
+<script>
+    const player = new MediaElementPlayer(document.querySelector('video'), {
+        youtube: {
+            nocookie: true
+        }
+    });
+</script>
+</body>
+</html>
