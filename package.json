@@ -10,8 +10,8 @@
     "start": "browser-sync start --server --files \"*.html\""
   },
   "dependencies": {
-    "mediaelement": "^5.0.0",
-    "mediaelement-plugins": "^2.6.0"
+    "mediaelement": "4.2.16",
+    "mediaelement-plugins": "2.5.1"
   },
   "devDependencies": {
     "browser-sync": "^2.27.5"
