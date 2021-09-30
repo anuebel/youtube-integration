@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>mediaelement (youtube-nocookie.com)</title>
-    <link rel="stylesheet" href="node_modules/mediaelement/build/mediaelementplayer.css"/>
+  <meta charset="UTF-8">
+  <title>mediaelement (youtube-nocookie.com)</title>
+  <link rel="stylesheet" href="node_modules/mediaelement/build/mediaelementplayer.css"/>
+  <link rel="stylesheet" href="node_modules/mediaelement-plugins/dist/a11y/a11y.css"/>
+  <link rel="stylesheet" href="node_modules/mediaelement-plugins/dist/context-menu/context-menu.css"/>
+  <link rel="stylesheet" href="node_modules/mediaelement-plugins/dist/jump-forward/jump-forward.css"/>
+  <link rel="stylesheet" href="node_modules/mediaelement-plugins/dist/loop/loop.css"/>
+  <link rel="stylesheet" href="node_modules/mediaelement-plugins/dist/playlist/playlist.css"/>
 </head>
 <body>
 <h1>Als mediaelement von youtube-nocookie.com</h1>
-<video style="max-width: 100%">
-    <source type="video/youtube" src="https://www.youtube.com/watch?v=YE7VzlLtp-4">
+<video style="max-width: 100%"
+       data-video-description='[{
+                   "src": "https://video.aktion-mensch.de/magnolia/aktion-mensch-videoplayer/aktion-mensch_beispiel/aktion-mensch_beispiel_signlanguageVideo.mp4", "type": "video/mp4"
+                 }]'
+       data-audio-description='[{
+                   "src": "https://video.aktion-mensch.de/magnolia/aktion-mensch_beispiel_audioDescription.mp3", "type": "audio/mp3"
+                 }]'
+       data-audio-description-voiceover="false">
+  <source type="video/youtube" src="https://www.youtube.com/watch?v=YE7VzlLtp-4">
 </video>
 <script src="node_modules/mediaelement/build/mediaelement-and-player.js"></script>
+<script src="node_modules/mediaelement-plugins/dist/a11y/a11y.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/context-menu/context-menu.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/jump-forward/jump-forward.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/loop/loop.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/playlist/playlist.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/speed/speed.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/a11y/a11y-i18n.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/context-menu/context-menu-i18n.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/jump-forward/jump-forward-i18n.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/loop/loop-i18n.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/playlist/playlist-i18n.js" charset="UTF-8"></script>
+<script src="node_modules/mediaelement-plugins/dist/speed/speed-i18n.js" charset="UTF-8"></script>
 <script>
-    const player = new MediaElementPlayer(document.querySelector('video'), {
-        youtube: {
-            nocookie: true
-        }
-    });
+  const player = new MediaElementPlayer(document.querySelector('video'), {
+    features: ['playpause', 'current', 'progress', 'duration', 'tracks', 'a11y', 'volume', 'fullscreen'],
+    youtube: {
+      nocookie: true
+    }
+  });
 </script>
 </body>
 </html>
